@@ -2,7 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import i18n from './i18n'
 import router from './router'
+import 'normalize.css'
+import './stylus/index'
 
 Vue.config.productionTip = false
 
@@ -10,6 +13,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  i18n,
   components: { App },
   template: '<App/>'
 })

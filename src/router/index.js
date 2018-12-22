@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Vote from '@/components/pages/bch/vote'
 
 Vue.use(Router)
 
@@ -9,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'vote',
+      component: Vote
     }
   ]
 })
