@@ -1,6 +1,7 @@
 'use strict'
 const utils = require('./utils')
 const webpack = require('webpack')
+const address = require('address')
 const config = require('../config')
 const merge = require('webpack-merge')
 const path = require('path')
@@ -82,7 +83,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [`Your application is running here: http://localhost:${port} or http://${address.ip()}:${port}`] ,
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()
