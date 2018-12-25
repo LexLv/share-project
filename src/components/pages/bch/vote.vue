@@ -7,14 +7,14 @@
           <div class="tip" v-if="!isVote">{{$t('点击 支持/反对')}}</div>
         </div>
         <div class="chick-view" v-if="!isVote">
-          <div class="support-view view" @click="vote(1)">{{$t('支持')}}<span class="support-img"><img src="@/assets/bch/yes.svg"></span></div>
+          <div class="support-view view " @click="vote(1)">{{$t('支持')}}<span class="support-img"><img src="@/assets/bch/yes.svg"></span></div>
           <div class="ratio">vs</div>
-          <div class="oppose-view view" @click="vote(2)">{{$t('反对')}}<span class="oppose-img"><img src="@/assets/bch/no.svg"></span></div>
+          <div class="oppose-view view " @click="vote(2)">{{$t('反对')}}<span class="oppose-img"><img src="@/assets/bch/no.svg"></span></div>
         </div>
         <div class="progress-view">
           <div :class="`box ${option_id == 1?'support-box':'oppose-box'}`" v-if="isVote"> <div class="text-info">{{$t(`${option_id == 1?'支持':'反对'}`)}}</div></div>
           <div class="progress">
-            <div class="support-progress" id="support-progress"></div>
+            <div class="support-progress animated pulse delays-1s" id="support-progress"></div>
           </div>
           <div class="number-view">
             <div class="support">
@@ -38,7 +38,7 @@
           <div class="btn" @click="share">{{$t('分享投票到微信')}}</div>
         </div>
       </div>
-      <div class="share-view" id="share-view" v-show="isShowShareView" >
+      <div class="share-view" v-show="isShowShareView" id="share-view">
         <div class="logo-view"><img src="@/assets/bch/LOGO.svg"></div>
         <div class="top-view">
           <img :src="title_img[language]">
@@ -71,9 +71,8 @@
             <div class="text-view">{{$t('扫码下载PureWallet，参与投票，共建中本聪点对点电子现金系统')}}</div>
           </div>
         </div>
-        
       </div>
-      <div class="mask-ovte-view" v-show="showVote" @click="close">
+      <div class="mask-ovte-view animated fadeIn delays-1s" v-show="showVote" @click="close">
         <div class="tip-view" id="pop-view" v-if="isTip" >
           <div class="info-text-view">
             {{tipStr}}
@@ -203,6 +202,11 @@ export default {
       })
     },
     share () {
+      // html2canvas(document.getElementById('share-view')).then(canvas=>{
+      //   // var dataurl = canvas.toDataURL("image/png")
+      //   document.body.appendChild(canvas)
+      // })
+
       this.isShowShareView = true
       setTimeout(() => {
         html2canvas(document.getElementById('share-view')).then(canvas=>{
@@ -258,7 +262,7 @@ export default {
       height 100%
       display flex
       flex-direction column
-      background-image url('../../../assets/bch/BG3.png')
+      background-image url('../../../assets/bch/BG2.png')
       background-repeat repeat
       background-size 100% 100%
       .top-view
