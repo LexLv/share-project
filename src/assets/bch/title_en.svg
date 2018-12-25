@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="660px" height="179px" viewBox="0 0 660 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>title_en</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="NotoSansHans-Black, Noto Sans S Chinese" font-size="56" font-weight="700" line-spacing="64">
+        <g id="投票_BCH出块时间-en" transform="translate(-45.000000, -188.000000)" fill="#FFFFFF">
+            <g id="Group-8" transform="translate(16.000000, 182.000000)">
+                <text id="BLOCK-TIME-DECREASE">
+                    <tspan x="32.372" y="49">BLOCK TIME DECREASE </tspan>
+                    <tspan x="174.024" y="113">FROM 10 MIN </tspan>
+                    <tspan x="100.552" y="177">TO SHORTER TIME</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

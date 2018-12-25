@@ -8,7 +8,8 @@ const messages = {
   zh,
   en
 }
-const language = GetQueryString('language') == '' ?((/^zh$|^zh-CN$/i.test(navigator.language)) ? 'zh':'en'):GetQueryString('language')
+const language = GetQueryString('lang') == '' ?((/^zh$|^zh-CN$/i.test(navigator.language)) ? 'zh':'en'):GetQueryString('lang')
+window.language = language
 const i18n = new VueI18n({
   locale: language,
   messages
