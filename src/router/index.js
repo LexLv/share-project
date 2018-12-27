@@ -1,11 +1,10 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import Vue from 'vue'
+// import Router from 'vue-router'
 import Vote from '@/components/pages/bch/vote'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   mode: 'history',
   routes: [
     {

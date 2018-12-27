@@ -10,14 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
     "html2canvas": "^1.0.0-alpha.12",
     "pug": "^2.0.3",
-    "vue": "^2.5.2",
-    "vue-i18n": "^8.5.0",
-    "vue-progressbar": "^0.7.5",
-    "vue-router": "^3.0.1"
+    "vue-i18n": "^8.5.0"
   },
   "devDependencies": {
     "address": "^1.0.3",
@@ -58,7 +53,8 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "engines": {
     "node": ">= 6.0.0",

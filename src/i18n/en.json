@@ -6,7 +6,7 @@
 	"已投反对":"Against",
 	"投票规则":"Voting Rules",
 	"1.投票会校验钱包BCH余额，每一BCH代表一票;":"1. The BCH balance of the wallet will be verified by voting, and each BCH represents one vote.",
-	"2.投票不会发起BCH交易，不会消耗BCH;":"2. The vote will not initiate a BCH transaction and will not consume BCH.",
+	"2.投票不会发起BCH交易，不会消耗BCH;":"2. The vote will not initiate transactions or consume BCH.",
 	"3.每个账户只能进行一次投票;":"3. Each account can only vote once.",
 	"4.投票需要在PureWallet中参与。":"4. Voting is required to participate in PureWallet.",
 	"分享投票到微信":"Share votes to WeChat",

@@ -15,6 +15,11 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  externals:{
+    'vue': 'Vue',
+    'axios': 'axios',
+    'vue-router': 'VueRouter'
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -24,6 +29,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
+    modules: [
+      resolve('src'),
+      resolve('node_modules')
+    ],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -34,12 +43,15 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: vueLoaderConfig,
+        include: [resolve('src')],
+        exclude: /node_modules\/(?!(autotrack|dom-utils))|vendor\.dll\.js/
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        loader: 'babel-loader?cacheDirectory',
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

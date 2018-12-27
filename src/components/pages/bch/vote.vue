@@ -38,7 +38,7 @@
           <div class="btn" @click="share">{{$t('分享投票到微信')}}</div>
         </div>
       </div>
-      <div class="share-view" v-show="isShowShareView" id="share-view">
+      <div class="share-view" v-show="isShowShareView" id="share-view" >
         <div class="logo-view"><img src="@/assets/bch/LOGO.svg"></div>
         <div class="top-view">
           <img :src="title_img[language]">
@@ -97,8 +97,6 @@
 
 <script>
 import html2canvas from 'html2canvas'
-import axios from 'axios'
-import { thisTypeAnnotation } from 'babel-types';
 export default {
   name: 'Vote',
   data () {
@@ -169,7 +167,7 @@ export default {
       shareprogress.style.width = widthstr
     },
     toPercent(point){
-      var str=Number(point*100).toFixed(2)
+      var str = Number(point*100).toFixed(2)
       str += "%"
       return str
     },
@@ -197,7 +195,7 @@ export default {
           setTimeout(() => {
             this.showVote = false
             this.isTip = false
-          }, 1000)
+          }, 2000)
         }
       })
     },
@@ -231,7 +229,7 @@ export default {
         setTimeout(() => {
           this.showVote = false
           this.isTip = false
-        }, 1000)
+        }, 2000)
         return
       }
       this.showVote = true
@@ -274,7 +272,7 @@ export default {
         >img 
           width 100%
       .chick-view
-        margin-top 30px
+        margin-top 20px
         padding 0 25px
         display flex
         justify-content center
@@ -308,7 +306,7 @@ export default {
             >img 
               width 38px 
       .progress-view
-        padding 30px 30px 0 
+        padding 20px 30px 0 
         .box
           font-size 13px
         .support-box
@@ -362,7 +360,7 @@ export default {
               margin 0
       .tips-view
         text-align left 
-        padding 30px 25px 0
+        padding 25px 25px 0
         font-size: 12px;
         color: #FFFFFF;
         line-height 23px
@@ -373,6 +371,8 @@ export default {
         display flex
         align-items center
         justify-content center
+        margin-top 20px
+        margin-bottom 20px
         .btn
           padding 0 40px
           line-height 45px
@@ -384,7 +384,6 @@ export default {
       position absolute
       z-index -1
       top 0
-      height 100%
       display flex
       flex-direction column
       background-image url('../../../assets/bch/BG2.png')
@@ -443,10 +442,7 @@ export default {
         .title
           font-size 14px
       .bottom-view
-        position absolute
-        bottom 15px
-        left 0
-        padding 0 15px
+        padding 0 15px 15px
         .info-view
           padding 15px
           background #FFFFFF
