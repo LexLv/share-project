@@ -7,9 +7,9 @@
           <div class="tip" v-if="!isVote">{{$t('点击 支持/反对')}}</div>
         </div>
         <div class="chick-view" v-if="!isVote">
-          <div class="support-view view " @click="vote(1)">{{$t('支持')}}<span class="support-img"><img src="@/assets/bch/yes.svg"></span></div>
+          <div class="support-view view " @click="vote(1)">{{$t('支持')}}<span class="support-img"><img src="@/assets/bch/yes.png"></span></div>
           <div class="ratio">vs</div>
-          <div class="oppose-view view " @click="vote(2)">{{$t('反对')}}<span class="oppose-img"><img src="@/assets/bch/no.svg"></span></div>
+          <div class="oppose-view view " @click="vote(2)">{{$t('反对')}}<span class="oppose-img"><img src="@/assets/bch/no.png"></span></div>
         </div>
         <div class="progress-view">
           <div :class="`box ${option_id == 1?'support-box':'oppose-box'}`" v-if="isVote"> <div class="text-info">{{$t(`${option_id == 1?'支持':'反对'}`)}}</div></div>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="share-view" v-show="isShowShareView" id="share-view" >
-        <div class="logo-view"><img src="@/assets/bch/LOGO.svg"></div>
+        <div class="logo-view"><img src="@/assets/bch/LOGO.png"></div>
         <div class="top-view">
           <img :src="title_img[language]">
         </div>
@@ -103,8 +103,8 @@ export default {
     return {
       moda: '',
       title_img:{
-        en: require('@/assets/bch/title_en.svg'),
-        zh: require('@/assets/bch/title_cn.svg')
+        en: require('@/assets/bch/title_en.png'),
+        zh: require('@/assets/bch/title_cn.png')
       },
       supportNum: 0,
       opposeNum: 0,
